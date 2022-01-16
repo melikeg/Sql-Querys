@@ -295,7 +295,7 @@ ON customer.store_id = payment.staff_id;
 ```
 SELECT customer.first_name, customer.last_name, rental.rental_id 
 FROM rental
-INNER JOIN customer 
+FULL JOIN customer 
 ON customer.customer_id = rental.customer_id;
 ```
 

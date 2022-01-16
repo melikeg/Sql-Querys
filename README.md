@@ -247,8 +247,28 @@ DELETE FROM employee
 WHERE name ILIKE '%y';
 ```
 
+## Ödev 9
 
+1. City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 
+```
+SELECT city, country FROM city 
+INNER JOIN country ON country.country_id = city.country_id;
+```
+
+2. Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+```
+SELECT customer.first_name, customer.last_name, payment.payment_id FROM customer
+INNER JOIN payment ON customer.store_id = payment.staff_id;
+```
+
+3. Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+```
+SELECT customer.first_name, customer.last_name, rental.rental_id FROM rental
+INNER JOIN customer ON customer.customer_id = rental.customer_id;
+```
 
 
 
